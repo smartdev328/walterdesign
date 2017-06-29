@@ -1,0 +1,397 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: OpenSansBoldItalic;
+    src: url(../font/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: OpenSansSemiBold;
+    src: url(../font/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+
+
+.font-opensans-bolditalic {
+    font-family: OpenSansBoldItalic;
+}
+
+.font-opensans-semibold {
+    font-family: OpenSansSemiBold;
+}
+
+.font-opensans-bold {
+    font-family: OpenSansBold;
+}
+.font-opensans {
+    font-family: OpenSans;
+}
+
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 53px;
+    position:absolute;
+    top: 0px;
+    z-index: 999;
+    background: white;
+}
+
+#header .logo {
+    width: 150px; 
+    height: 30px;
+    background: url("../imgs/logo.png");
+    background-size: 100% 100%;
+
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+    background-image: url("../imgs/Artboard1.png");
+    background-size: 100% 100%;
+    width: 100vw;
+    height:100vh;
+    box-sizing: border-box;
+    padding-top: 63px;
+}
+
+#main-content .wrapper {
+    border-radius: 17px;
+    background: rgba(255,255,255,0.8);
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+
+#main-content .header {
+   text-align: center;
+   width: 100%;
+   box-sizing: border-box;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   
+}
+
+.header-title {
+    padding: 10px 20px;
+    padding-bottom: 0px;
+    font-size: 2rem;
+    color: #523782;
+    margin-bottom: -10px;
+}
+
+#main-content .content {
+        width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+#main-content .content .quiz {
+       font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#main-content .content .tip {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    box-sizing: border-box;
+    width: 350px;
+}
+
+.tip .checkmark {
+    width: 50px;
+    height: 25px;
+    background: url(../imgs/checkmark_true.png) no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    /* padding: 20px; */
+    background-size: 55% 90%;
+    font-weight: bold;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 1.1rem;
+    max-height: 60px;
+    overflow: hidden;
+    font-family: OpenSansSemiBold;
+}
+
+#main-content .footer {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+#main-content .footer  .round-btn {
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #e40e7b;
+    color: white;
+       align-items: center;
+       display: flex;
+       font-family: OpenSansBold;
+}
+
+#main-content .footer  .round-btn img {
+    height: 15px;
+}
+#main-content .footer .round-btn span {
+    font-size: 1.3rem;
+}
+
+
+#main-content .footer  .footer-desc {
+    font-size: 1.1rem;    
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+
+
+@media (min-width:360px) and (max-width: 540px) {
+    
+     #main-content {
+          display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    #main-content .wrapper {
+        width: 350px;
+        height: 600px;
+             
+    }
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+}
+
+
+@media (min-width:540px) and (max-width: 760px) {
+    
+     #main-content {
+          display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    #main-content .wrapper {
+        width: 500px;
+        height: 600px;
+             
+    }
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+}
+
+
+
+
+@media (min-width:980px) {
+    * {
+        font-size: 20px;
+    }
+     #main-content {
+          display: flex;
+
+    }
+    #main-content .wrapper {
+        width: 950px;
+        height: 620px;
+        margin-top: 150px;
+    }
+    #main-content .content {
+        flex-flow: row;
+        padding: 30px 50px;
+        box-sizing: border-box;
+    }
+#main-content .content>div {
+    flex: 1;
+}
+#main-content .content .quiz {
+    text-align: left;
+    padding-left: 20px;
+    }
+#main-content .content  img {
+    width: 300px;
+}
+#main-content .content .tip{
+    width: 100%;   
+    padding: 10px 0px;
+    align-items: flex-start;
+}
+
+#main-content .header {
+    padding: 20px;
+   
+}
+#main-content .footer {
+    flex-flow: row;
+    
+}
+#main-content .footer  .curve-arrow {
+    width: 130px;
+    padding: 50px 60px;
+    padding-left: 70px;
+    display: block;
+}
+
+#main-content .footer  .round-btn {
+    font-size: 1.5rem;
+    padding-right: 100px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#main-content .footer .round-btn span {
+    font-size: 1.5rem;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 18px;
+    max-height: 100px;
+    overflow: hidden;
+}
+#main-content {
+    background-image: url("../imgs/Artboard1-desktop.png");
+}
+
+#main-content .footer  .round-btn img {
+    height: 15px;
+}
+#main-content .footer .footer-desc {
+    font-size: 18px;
+}
+
+
+}
+
+
+@media (max-width:980px) and (min-width: 760px) {
+    * {
+        font-size: 15px;
+    }
+     #main-content {
+          display: flex;
+
+    }
+    #main-content .wrapper {
+        width: 95%;
+        height: 620px;
+        margin-top: 100px;
+    }
+    #main-content .content {
+        flex-flow: row;
+        padding: 30px 50px;
+        box-sizing: border-box;
+    }
+#main-content .content>div {
+    flex: 1;
+}
+#main-content .content .quiz {
+    text-align: left;
+    padding-left: 20px;
+    }
+#main-content .content  img {
+    width: 300px;
+}
+#main-content .content .tip{
+    width: 100%;   
+    padding: 10px 0px;
+    align-items: flex-start;
+}
+
+#main-content .header {
+    padding: 20px;
+   
+}
+#main-content .footer {
+    flex-flow: row;
+    
+}
+#main-content .footer  .curve-arrow {
+    width: 100px;
+    padding: 30px 40px;
+    padding-left: 50px;
+    display: block;
+}
+
+#main-content .footer  .round-btn {
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#main-content .footer .round-btn span {
+    font-size: 1.5rem;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 18px;
+    max-height: 100px;
+    overflow: hidden;
+}
+#main-content {
+    background-image: url("../imgs/Artboard1-desktop.png");
+}
+
+#main-content .footer  .round-btn img {
+  height: 15px;
+}
+#main-content .footer .footer-desc {
+    font-size: 18px;
+}
+#main-content .footer .button-section {
+    flex: 1;
+    margin-right: 50px;
+}
+
+}
