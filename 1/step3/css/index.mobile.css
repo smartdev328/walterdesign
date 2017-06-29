@@ -1,0 +1,291 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: OpenSansBoldItalic;
+    src: url(../../../font/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: OpenSansSemiBold;
+    src: url(../../../font/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../../../font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../../../font/OpenSans-Regular.ttf);
+}
+
+
+
+.font-opensans-bolditalic {
+    font-family: OpenSansBoldItalic;
+}
+
+.font-opensans-semibold {
+    font-family: OpenSansSemiBold;
+}
+
+.font-opensans-bold {
+    font-family: OpenSansBold;
+}
+.font-opensans {
+    font-family: OpenSans;
+}
+
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 53px;
+    position:absolute;
+    top: 0px;
+    z-index: 999;
+    background: white;
+}
+
+#header .logo {
+    width: 150px; 
+    height: 30px;
+    background: url("../imgs/logo.png");
+    background-size: 100% 100%;
+
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+    background-image: url("../imgs/Artboard1.png");
+    background-size: 100% 100%;
+    width: 100vw;
+    height:100%;
+    box-sizing: border-box;
+    padding-top: 63px;
+    min-height: 100vh;
+}
+
+#main-content .wrapper {
+    border-radius: 17px;
+    background: rgba(255,255,255,0.8);
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+
+#main-content .header {
+   text-align: center;
+   width: 100%;
+   box-sizing: border-box;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   position: relative;
+}
+
+.header-title {
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #523782;
+}
+
+#main-content .content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#main-content .content .quiz {
+       font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#main-content .content .tip {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    box-sizing: border-box;
+    width: 350px;
+}
+
+.tip .checkmark {
+    width: 50px;
+    height: 25px;
+    background: url(../imgs/checkmark_true.png) no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    /* padding: 20px; */
+    background-size: 55% 90%;
+    font-weight: bold;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 1.1rem;
+    max-height: 60px;
+    overflow: hidden;
+    font-family: OpenSansSemiBold;
+}
+
+#main-content .footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+#main-content .footer  .round-btn {
+border-radius: 10px;
+    font-size: 24px;
+    /* padding: 20px 100px; */
+    background: rgb(228,14,123);
+    color: white;
+    align-items: center;
+    display: flex;
+    font-family: OpenSansBold;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+
+.round-btn-disable {
+    background: rgba(228,14,123, 0.4) !important;
+}
+
+#main-content .footer  .round-btn img {
+    height: 15px;
+}
+#main-content .footer .round-btn span {
+    font-size: 1.3rem;
+}
+
+
+#main-content .footer  .footer-desc {
+    font-size: 1.1rem;    
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+
+.back-btn {
+    background: url(../imgs/back.png);
+    background-size: 100% 100%;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+}
+
+.card {
+      display: flex;
+     flex-flow: column wrap;
+     align-items: center;
+     width: 85px;
+     margin-bottom: 15px;
+}
+
+.card .title {
+    font-size: 1.1rem; 
+    font-family: OpenSansSemiBold;
+    color: #242424;
+}
+.card .date {
+    color: gray;
+     font-size: 1rem; 
+    font-family: OpenSansSemiBold;
+}
+
+.card-disable {
+    opacity: 0.5;
+}
+
+
+#progress-bar {
+    position: absolute;
+    margin: 0px 10%;
+    width: 80%;
+    box-sizing: border-box;
+    top: -70px;
+}
+
+#progress-bar .progress-text {
+    color: white;
+    font-family: OpenSans;
+}
+#progress-bar .progress-bg {
+    border:solid 1px white;
+    background: rgba(255,255,255, 0.5);
+    width: 100%;
+    position:absolute;
+        height: 20px;
+
+    top: 25px;
+}
+#progress-bar .progress-fg {
+    background: white;
+    width: 20%;
+    border: solid 1px white;
+    position:absolute;
+    height: 20px;
+    top: 25px;
+}
+
+.card-disable {
+    opacity: 0.5;
+}
+
+
+@media (min-width:360px) and (max-width: 540px) {
+    
+     #main-content {
+          display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    #main-content .wrapper {
+        width: 350px;
+        height: 600px;
+             
+    }
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+
+}
