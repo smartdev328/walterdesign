@@ -132,6 +132,11 @@ a {
     flex: 1;
 }
 
+
+hr {
+    border-style: solid;
+    border-color: rgba(128,128,128,0.5);
+}
 #context .header {
    text-align: center;
    width: 100%;
@@ -226,6 +231,7 @@ border-radius: 5px;
     height: 15px;
     top: 25px;
 }
+
 
 .login-form {
     display: flex;
