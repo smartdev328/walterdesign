@@ -173,14 +173,14 @@ a {
 .header-title {
     padding: 10px 20px;
     font-size: 2rem;
-    color: #523782;
+    color: #AE0202;
 }
 
 #context .round-btn {
 border-radius: 5px;
     font-size: 24px;
     /* padding: 20px 100px; */
-    background: rgb(228,14,123);
+    background: #AE0202;
     color: white;
     align-items: center;
     display: flex;
@@ -201,7 +201,7 @@ border-radius: 5px;
 
 
 .round-btn-disable {
-    background: rgba(228,14,123, 0.4) !important;
+    opacity: 0.5;
 }
 
 .back-btn {
@@ -327,7 +327,7 @@ margin-top: 15px;
 .header-title {
     padding: 10px 20px;
     font-size: 1.8rem;
-    color: #523782;
+    color: #AE0202;
 }
 
 .facebookbtn {
@@ -469,11 +469,20 @@ margin-top: 15px;
         top: 20px;
     }
 
-   
+    #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
+
 }
 
 
 @media (min-width: 1150px)  {
+     #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
+
     * {
         font-size: 17px;
     }

@@ -145,7 +145,7 @@ a {
     border-radius: 5px;
     font-size: 24px;
     /* padding: 20px 100px; */
-    background: rgb(228, 14, 123);
+    background: #AE0202;
     color: white;
     align-items: center;
     display: flex;
@@ -164,8 +164,8 @@ a {
 }
 
 .round-btn-disable {
-    background: rgba(228, 14, 123, 0.4) !important;
-}
+ opacity: 0.5;
+ }
 
 .back-btn {
     background: url(../imgs/back.png);
@@ -247,7 +247,7 @@ a {
 }
 
 .save-btn {
-    color: #e4027b;
+    color: #AE0202;
     display: inline-block;
     padding: 5px 10px;
     cursor: pointer;
@@ -293,7 +293,7 @@ a {
 }
 
 .edit-btn {
-    color: #e4027b;
+    color: #AE0202;
     font-family: OpenSansSemiBold;
     font-size: 1rem;
     cursor: pointer;
@@ -306,7 +306,7 @@ a {
 
 .header-title {
     font-size: 1.8rem;
-    color: #523782;
+    color: #AE0202;
 }
 
 .facebookbtn {
@@ -395,9 +395,19 @@ a {
     .back-btn {
         top: 20px;
     }
+     #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
+
 }
 
 @media (min-width: 1150px) {
+     #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
+
     * {
         font-size: 17px;
     }

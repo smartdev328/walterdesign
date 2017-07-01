@@ -70,7 +70,7 @@ a {
 #context {
     display: flex;
     flex-flow: column;
-    background-image: url("../imgs/Artboard1-desktop.png");
+    background-image: url("../imgs/Artboard1.png");
     background-size: 100% 100%;
     width: 100vw;
     height: calc(100vh - 55px);
@@ -166,14 +166,14 @@ a {
 .header-title {
     padding: 10px 20px;
     font-size: 2rem;
-    color: #523782;
+    color: #AE0202;
 }
 
 #context .round-btn {
     border-radius: 5px;
     font-size: 24px;
     /* padding: 20px 100px; */
-    background: rgb(228, 14, 123);
+    background: #AE0202;
     color: white;
     align-items: center;
     display: flex;
@@ -198,7 +198,7 @@ a {
 
 .back-btn {
     background: url(../imgs/back.png);
-    background-size: 100% 100%;
+    background-size: 100% 850px;
     width: 10px;
     height: 20px;
     position: absolute;
@@ -316,7 +316,7 @@ a {
 .header-title {
     padding: 10px 20px;
     font-size: 1.8rem;
-    color: #523782;
+    color: #AE0202;
 }
 
 .facebookbtn {
@@ -419,7 +419,7 @@ a {
     border-radius: 15px;
     font-size: 20px;
     padding: 10px 30px;
-    background-color: #e40e7b;
+    background-color: #AE0202;
     color: white;
     align-items: center;
     display: flex;
@@ -565,9 +565,22 @@ a {
     .back-btn {
         top: 20px;
     }
+    #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
+
+    .button-section {
+        flex: 1;
+        margin-right: 40px;
+    }
 }
 
 @media (min-width: 1150px) {
+     #context {
+               background: black url(../imgs/Artboard1-desktop.png);
+    background-size: 100% ;
+    }
     * {
         font-size: 17px;
     }
@@ -581,5 +594,10 @@ a {
     }
     .back-btn {
         top: 20px;
+    }
+
+     .button-section {
+        flex: 1;
+        margin-right: 40px;
     }
 }
