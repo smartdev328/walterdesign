@@ -70,7 +70,7 @@ a {
 #context {
     display: flex;
     flex-flow: column;
-    background-image: url("../imgs/Artboard1-desktop.png");
+    background-image: url("../imgs/Artboard1.png");
     background-size: 100% 100%;
     width: 100vw;
     height: calc(100vh - 55px);
@@ -397,7 +397,7 @@ a {
     }
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100%  100%;
     }
 
 }
@@ -405,7 +405,7 @@ a {
 @media (min-width: 1150px) {
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100% 100% ;
     }
 
     * {

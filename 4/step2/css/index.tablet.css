@@ -1,0 +1,112 @@
+
+
+@media (min-width:540px) and (max-width: 760px) {
+    
+     #main-content {
+          display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    #main-content .wrapper {
+        width: 500px;
+        height: 700px;
+             
+    }
+#main-content .footer  .curve-arrow {
+    display: none;
+}
+
+
+.card {
+    width: 120px;
+}
+
+}
+
+
+
+
+@media (max-width:980px) and (min-width: 760px) {
+    * {
+        font-size: 15px;
+    }
+     #main-content {
+          display: flex;
+
+    }
+    #main-content .wrapper {
+        width: 95%;
+        margin-top: 100px;
+    }
+    #main-content .content {
+        flex-flow: row wrap;
+        padding: 30px 50px;
+        box-sizing: border-box;
+        max-width: 760px;
+    margin:auto;
+    }
+
+#main-content .header {
+    padding: 20px;
+   
+}
+#main-content .footer {
+    flex-flow: row;
+    
+}
+#main-content .footer  .curve-arrow {
+    width: 100px;
+    padding: 30px 40px;
+    padding-left: 50px;
+    display: block;
+}
+
+#main-content .footer  .round-btn {
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#main-content .footer .round-btn span {
+    font-size: 1.5rem;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 18px;
+    max-height: 100px;
+    overflow: hidden;
+}
+#main-content {
+    background-image: url("../imgs/Artboard1-desktop.png");
+}
+
+#main-content .footer  .round-btn img {
+  height: 15px;
+}
+#main-content .footer .footer-desc {
+    font-size: 18px;
+}
+#main-content .footer .button-section {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.card {
+    width: 130px;
+    margin-right:3px; 
+    margin-left: 3px;
+}
+
+.back-btn {
+    background: url(../imgs/back.png);
+    background-size: 100% 100%;
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 36px;
+    left: 20px;
+}
+
+}

@@ -72,7 +72,7 @@ a {
     display: flex;
     flex-flow: column;
     
-    background-image: url("../imgs/Artboard1-desktop.png");
+    background-image: url("../imgs/Artboard1.png");
     background-size: 100% 100%;
     width: 100vw;
     height:calc(100vh - 55px);
@@ -242,7 +242,7 @@ border-radius: 5px;
     background: rgba(255,255,255, 0.5);
     width: 100%;
     position:absolute;
-    height: 10px;
+    height: 15px;
 
     top: 25px;
 }
@@ -251,7 +251,7 @@ border-radius: 5px;
     
     border: solid 1px white;
     position:absolute;
-    height: 10px;
+    height: 15px;
     top: 25px;
 }
 
@@ -472,7 +472,7 @@ margin-top: 15px;
 
     #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100% 100% ;
     }
 
 }
@@ -481,7 +481,7 @@ margin-top: 15px;
 @media (min-width: 1150px)  {
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100%  100%;
     }
 
     * {

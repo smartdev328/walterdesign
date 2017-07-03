@@ -233,7 +233,7 @@ a {
     background: rgba(255, 255, 255, 0.5);
     width: 100%;
     position: absolute;
-    height: 10px;
+    height: 15px;
     top: 25px;
 }
 
@@ -241,7 +241,7 @@ a {
     background: white;
     border: solid 1px white;
     position: absolute;
-    height: 10px;
+    height: 15px;
     top: 25px;
 }
 
@@ -452,6 +452,8 @@ a {
     display: inline-block;
 }
 
+
+
 @media (max-width:460px) {
     * {
         font-size: 12px;
@@ -523,6 +525,7 @@ a {
     .quiz {
         text-align: center;
     }
+
 }
 
 @media (max-width: 850px) and (min-width: 550px) {
@@ -567,7 +570,7 @@ a {
     }
     #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100% 100%;
     }
 
     .button-section {
@@ -579,7 +582,7 @@ a {
 @media (min-width: 1150px) {
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100% 100% ;
     }
     * {
         font-size: 17px;

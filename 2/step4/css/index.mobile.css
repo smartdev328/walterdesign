@@ -70,7 +70,7 @@ a {
 #context {
     display: flex;
     flex-flow: column;
-    background-image: url("../imgs/Artboard1-desktop.png");
+    background-image: url("../imgs/Artboard1.png");
     background-size: 100% 100%;
     width: 100vw;
     height: calc(100vh - 55px);
@@ -209,7 +209,7 @@ hr {
     background: rgba(255, 255, 255, 0.5);
     width: 100%;
     position: absolute;
-    height: 10px;
+    height: 15px;
     top: 25px;
 }
 
@@ -217,7 +217,7 @@ hr {
     background: white;
     border: solid 1px white;
     position: absolute;
-    height: 10px;
+    height: 15px;
     top: 25px;
 }
 
@@ -352,7 +352,7 @@ hr {
     }
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100% 100% ;
     }
 
 }
@@ -360,7 +360,7 @@ hr {
 @media (min-width: 1150px) {
      #context {
                background: black url(../imgs/Artboard1-desktop.png);
-    background-size: 100% ;
+    background-size: 100%  100%;
     }
 
     * {
