@@ -1,0 +1,874 @@
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: OpenSansBoldItalic;
+    src: url(../../font/OpenSans-BoldItalic.ttf);
+    src: url(../../font/OpenSans-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: OpenSansSemiBold;
+    src: url(../../font/OpenSans-SemiBold.ttf);
+    src: url(../../font/OpenSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../../font/OpenSans-Bold.ttf);
+    src: url(../../font/OpenSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../../font/OpenSans-Regular.ttf);
+    src: url(../../font/OpenSans-Regular.ttf) format('truetype');
+}
+
+.font-opensans-bolditalic {
+    font-family: OpenSansBoldItalic !important;
+}
+
+.font-opensans-semibold {
+    font-family: OpenSansSemiBold !important;
+}
+
+.font-opensans-bold {
+    font-family: OpenSansBold;
+}
+
+.font-opensans {
+    font-family: OpenSans;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 53px;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    background: white;
+}
+
+#header .logo {
+    width: 150px;
+    height: 30px;
+    background: url("../imgs/common/logo.png");
+    background-size: 100% 100%;
+}
+
+#context {
+    display: flex;
+    flex-flow: column;
+    background-image: url("../imgs/common/Artboard1-desktop.png");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: calc(100vh - 55px);
+    box-sizing: border-box;
+    margin-top: 55px;
+    align-items: center;
+    justify-content: center;
+}
+
+#context .wrapper {
+    width: 90vw;
+    margin: 10px 5%;
+    box-sizing: border-box;
+    position: relative;
+    height: 135vw;
+    max-height: 80%;
+    min-height: 550px;
+}
+
+.wrapper .main-content {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    box-sizing: border-box;
+    color: gray;
+    font-family: OpenSans;
+}
+
+.wrapper .main-content input {
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: solid 1px transparent;
+    box-sizing: border-box;
+    font-family: OpenSansSemiBold;
+}
+
+.wrapper .main-content select {
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 60px 10px 10px;
+    font-size: 1.1rem;
+    border: none;
+    text-align: left;
+    border: solid 1px transparent;
+    margin-bottom: 10px;
+    color: #222;
+    background: #eee url("../imgs/step5/down-arrow.png") no-repeat 90% center;
+    background-size: 20px 20px;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.request-select-box:hover {
+    border: solid 1px #aaaaaa;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 0px;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-50 {
+    width: 50%;
+    min-width: 360px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+#context .header {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+}
+
+.header-title {
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #523782;
+    min-height: 60px;
+}
+
+#context .round-btn {
+    border-radius: 5px;
+    font-size: 24px;
+    /* padding: 20px 100px; */
+    background: rgb(228, 14, 123);
+    color: white;
+    align-items: center;
+    display: flex;
+    font-family: OpenSansSemiBold;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 30px;
+    max-height:76px;
+}
+
+.round-btn div {
+    font-size: 20px;
+    color: white;
+}
+
+.round-btn-disable {
+    background: rgba(228, 14, 123, 0.4) !important;
+}
+
+.back-btn {
+    background: url(../imgs/step2/back.png);
+    background-size: 100% 100%;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    cursor: pointer;
+}
+
+#progress-bar {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    position: absolute;
+    top: -7%;
+    width: 100%;
+}
+
+#progress-bar .progressbar-content {
+    height: 50px;
+    max-width: 700px;
+    width: 75%;
+    position: absolute;
+}
+
+#progress-bar .progress-text {
+    color: white;
+    font-family: OpenSans;
+    font-size: 15px;
+}
+
+#progress-bar .progress-bg {
+    border: solid 1px white;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    position: absolute;
+    height: 15px;
+    top: 25px;
+}
+
+#progress-bar .progress-fg {
+    background: white;
+    border: solid 1px white;
+    position: absolute;
+    height: 15px;
+    top: 25px;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+   
+}
+
+.step4 .login-form {
+    align-items: flex-start;
+}
+
+
+.step7 .login-form {
+    align-items: center;
+}
+
+
+.login-btns {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 386px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.step4 .login-btns {
+    margin-bottom: initial;
+    margin-top: 0px;
+}
+
+.main-content .header {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+}
+
+.main-content .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 420px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.color-black {
+    color: #242424;
+}
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.card .title {
+    font-size: 14px;
+    font-family: OpenSansSemiBold;
+    color: #242424;
+}
+
+.card .date {
+    color: gray;
+    font-size: 12px;
+    font-family: OpenSansSemiBold;
+}
+
+.card-disable {
+    opacity: 0.5;
+}
+
+.header-title {
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    color: #523782;
+}
+
+.facebookbtn {
+    display: flex;
+    align-items: center;
+    background-color: #39579A;
+    font-family: OpenSansSemiBold;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.facebookbtn img {
+    width: 40px;
+    height: 40px;
+}
+
+.facebookbtn div {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.googlebtn {
+    display: flex;
+    align-items: center;
+    background-color: #3E82F7;
+    font-family: OpenSansSemiBold;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.googlebtn img {
+    width: 45px;
+    height: 45px;
+}
+
+.googlebtn div {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.edit-text {
+    text-align: right;
+    width: 100%;
+    display: none;
+}
+
+.edit-text input {
+    margin-top: 3px;
+    padding: 7px 10px;
+    outline: none;
+    border-radius: 8px;
+    border: solid 1px transparent;
+    box-sizing: border-box;
+    font-family: OpenSansSemiBold;
+    color: #242424;
+    width: 100%;
+}
+
+.cancel-btn {
+    color: #222;
+    padding: 5px 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: OpenSansSemiBold;
+}
+
+.save-btn {
+    color: #e4027b;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: OpenSansSemiBold;
+    text-shadow: rgba(0, 0, 0, 0.2) 0 0 1px 2px;
+}
+
+.edit-btn {
+    color: #e4027b;
+    font-family: OpenSansSemiBold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+
+.step6 .width-90 {
+    width: 100%;
+}
+
+.step6 .flex {
+    justify-content: space-between;
+}
+
+.step8 .wrapper .main-content {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    display: flex;
+    flex-flow: column;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #523782;
+    padding-bottom: 40px;
+    font-family: OpenSansBoldItalic;
+    position: relative;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanks-title {
+    color: #523782;
+    font-size: 1.5rem;
+    /* line-height: 2rem; */
+    font-family: OpenSansBoldItalic;
+    padding-bottom: 10px;
+}
+
+.thanks-subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: OpenSans;
+}
+
+.login-form .desc {
+    padding: 50px 10% 0px;
+    font-size: 13px;
+    text-align: center;
+    max-height: 100px;
+    overflow: hidden;
+    font-family: OpenSansSemiBold;
+}
+
+.horoscope-img {
+    max-width: 250px;
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 590px) {
+    * {
+        font-size: 12px;
+    }
+   
+    .step5 .width-90 {
+        width: 100%;
+    }
+    @media only screen and (max-width:480px) {
+ .card {
+        width: 25%;
+    }
+    .main-content .content {
+        width: 100%;
+    }
+    .card .title {
+        font-size: 12px;
+    }
+    .card .date {
+        font-size: 10px;
+    }
+    }
+    @media only screen and (max-width:430px) {
+        .step5 .width-50 {
+            width: 100%;
+            min-width: 250px;
+        }
+        .wrapper .main-content select {
+            margin-right: 0;
+            padding-right: calc(60px - 90px + 20vw);
+        }
+        .birthday-select {
+            justify-content: space-between;
+        }
+    }
+    @media only screen and (max-height:800px) {
+        #context {
+            justify-content: flex-end;
+        }
+        #context .wrapper {
+            height: calc(100% - 100px);
+            max-height: 100%;
+            min-height: 480px;
+        }
+        .step8 #context .wrapper,.step1 #context .wrapper {
+            height: 100%;
+            max-height: 100%;
+            min-height: 480px;
+        }
+    }
+}
+
+@media (max-width: 850px) and (min-width: 590px) {
+    * {
+        font-size: 14px;
+    }
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        width: 15px;
+        height: 30px;
+    }
+    .main-content .content {
+        width: 420px;
+    }
+    .login-form {
+        margin: 0px 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 850px) {
+    * {
+        font-size: 16px;
+    }
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        width: 15px;
+        height: 30px;
+    }
+    .main-content .content {
+        width: 420px;
+    }
+    .login-form {
+        margin: 0px 15px;
+    }
+}
+
+@media (min-width: 1150px) {
+    * {
+        font-size: 17px;
+    }
+    .main-content .content {
+        width: 450px;
+    }
+    #context .wrapper {
+        width: 950px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        width: 15px;
+        height: 30px;
+    }
+    .login-form {
+        margin: 0px 15px;
+    }
+}
+
+
+.main-content .content .quiz {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #242424;
+    margin-bottom: 10px;
+}
+
+.step1 .main-content .content img {
+    width: 200px;
+}
+
+.main-content .content .tip {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    /* width: 350px; */
+}
+
+.tip .checkmark {
+    width: 50px;
+    height: 25px;
+    background: url(../imgs/step1/checkmark_true.png) no-repeat;
+    background-position: left;
+    box-sizing: border-box;
+    background-size: 55% 90%;
+    font-weight: bold;
+}
+
+.tip .tip-content {
+    flex: 1;
+    font-size: 0.9rem;
+    max-height: 55px;
+    overflow: hidden;
+    font-family: OpenSans;
+}
+
+.main-content .footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-content .footer .round-btn {
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #e40e7b;
+    color: white;
+    align-items: center;
+    display: flex;
+    font-family: OpenSansBold;
+}
+.step1 .main-content .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+    color: #242424;
+}
+
+.step1 .main-content .footer .round-btn img {
+    height: 15px;
+}
+
+.step1 .main-content .footer .round-btn span {
+    font-size: 1.3rem;
+}
+
+.step1 .curve-arrow {
+    width: 150px;
+    padding: 0px 40px;
+}
+
+.step1 .main-content .footer .footer-desc {
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.step1 .main-content .footer .curve-arrow {
+    display: inline-block;
+}
+
+@media (max-width:460px)  {
+   .step1 #context .header { 
+       padding: 0px 30px;
+   }
+
+   .step1 .header-title {
+        font-size: 1.3rem;
+    }
+   .step1 .main-content .content {
+        width: 100%;
+        flex-flow: column;
+    }
+   .step1 .main-content .footer .curve-arrow {
+        display: none;
+    }
+   .step1 .main-content .content img {
+        width: 200px;
+    }
+   .step1 #progress-bar {
+        display: none;
+    }
+   .step1 .quiz {
+        text-align: center;
+    }
+   .step1 .main-content .footer .round-btn span {
+        font-size: 1rem;
+    }
+   
+}
+
+@media (max-width: 550px) and (min-width: 460px) {
+ 
+   .step1 #context .header { 
+       padding: 0px 30px;
+   }
+
+   .step1 .main-content .footer .curve-arrow {
+        display: none;
+    }
+   .step1 .header-title {
+        font-size: 1.3rem;
+    }
+   .step1 .main-content .footer .round-btn span {
+        font-size: 1rem;
+    }
+   .step1 #progress-bar {
+        display: none;
+    }
+   .step1 .main-content .content {
+        width: 100%;
+        flex-flow: column;
+    }
+   .step1 .main-content .content img {
+        width: 200px;
+    }
+   .step1 #progress-bar {
+        display: none;
+    }
+   .step1 .quiz {
+        text-align: center;
+    }
+   .step1 .main-content .footer .button-section {
+        margin: 0px;
+    }
+
+}
+
+@media (max-width: 850px) and (min-width: 550px) {
+    .step1 #context .header { 
+       padding: 0px 30px;
+   }
+   .step1 .main-content .footer .curve-arrow {
+        display: none;
+    }
+   .step1 .main-content .content {
+        width: 420px;
+        flex-flow: column;
+    }
+ 
+   .step1 #progress-bar {
+        display: none;
+    }
+   .step1 .quiz {
+        text-align: center;
+    }
+   
+}
+
+@media (min-width: 850px) {
+ 
+   .step1 #context .wrapper {
+        width: 82%;
+        height: 620px;
+        box-sizing: border-box;
+    }
+   .step1 .back-btn {
+        top: 20px;
+    }
+   .step1 .main-content .content img {
+        width: 32%;
+        min-width: 250px;
+    }
+  .step1  #context .wrapper .content>div {
+        flex: 1;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+   .step1 .tip .tip-content {
+        padding: 10px;
+        max-height: 60px;
+    }
+   .step1 .curve-arrow  {
+        width: 15%;
+    }
+   .step1 .main-content .footer .round-btn span {
+        font-size: 1.5rem;
+    }
+    .step1 .button-section {
+    flex: 1;
+    margin-right: 30px;
+}
+    
+}
+
+@media (min-width: 1150px) {
+  
+   .step1 .main-content .content img {
+        width: 300px;
+    }
+   .step1 #context .wrapper .content>div {
+        flex: 1;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+   .step1 .tip .tip-content {
+        padding: 10px;
+        max-height: 60px;
+    }
+   .step1  #context .wrapper {
+        width: 950px;
+        height: 620px;
+        box-sizing: border-box;
+    }
+   .step1 .main-content .footer .round-btn span {
+        font-size: 1.6rem;
+        padding: 20px;
+    }
+   .step1 .button-section {
+        flex: 1;
+        margin-right: 30px;
+    }
+    
+   
+}
+
+.btn-disable {
+    opacity: 0.5;
+}
