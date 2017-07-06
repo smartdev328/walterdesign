@@ -1,0 +1,13 @@
+<style>
+
+ .card {
+     display: flex;
+     flex-flow: column wrap;
+     align-items: center;
+     height: 33.2%;
+     margin-bottom: 0.1%;
+     cursor: pointer;
+     max-width: 25%;
+     width: 25%;
+ }
+ </style>

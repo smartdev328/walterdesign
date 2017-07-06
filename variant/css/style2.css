@@ -1,0 +1,595 @@
+    body,
+    html {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    * {
+        font-size: 12px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    @font-face {
+        font-family: OpenSansBoldItalic;
+        src: url(../../font/OpenSans-BoldItalic.ttf);
+        src: url(../../font/OpenSans-BoldItalic.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: OpenSansSemiBold;
+        src: url(../../font/OpenSans-SemiBold.ttf);
+        src: url(../../font/OpenSans-SemiBold.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: OpenSansBold;
+        src: url(../../font/OpenSans-Bold.ttf);
+        src: url(../../font/OpenSans-Bold.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: OpenSans;
+        src: url(../../font/OpenSans-Regular.ttf);
+        src: url(../../font/OpenSans-Regular.ttf) format('truetype');
+    }
+
+    .font-opensans-bolditalic {
+        font-family: OpenSansBoldItalic !important;
+    }
+
+    .font-opensans-semibold {
+        font-family: OpenSansSemiBold !important;
+    }
+
+    .font-opensans-bold {
+        font-family: OpenSansBold;
+    }
+
+    .font-opensans {
+        font-family: OpenSans;
+    }
+
+    #header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 53px;
+        position: absolute;
+        top: 0px;
+        z-index: 999;
+        background: white;
+    }
+
+    #header .logo {
+        width: 150px;
+        height: 30px;
+        background: url("../imgs/common/logo.png");
+        background-size: 100% 100%;
+    }
+
+    #context {
+        display: flex;
+        flex-flow: column;
+        background-image: url("../imgs/common/Artboard1-desktop.png");
+        background-size: 100% 100%;
+        width: 100vw;
+        height: calc(100vh - 55px);
+        box-sizing: border-box;
+        margin-top: 55px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #context .wrapper {
+        width: 90vw;
+        margin: 10px 5%;
+        box-sizing: border-box;
+        position: relative;
+        height: 135vw;
+        max-height: 80%;
+        min-height: 590px;
+    }
+
+    .wrapper .main-content {
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+        border-radius: 17px;
+        display: flex;
+        flex-flow: column;
+        padding: 10px;
+        box-sizing: border-box;
+        color: gray;
+        font-family: OpenSans;
+    }
+
+    .wrapper .main-content input {
+        padding: 10px;
+        outline: none;
+        border-radius: 8px;
+        border: solid 1px transparent;
+        box-sizing: border-box;
+        font-family: OpenSansSemiBold;
+    }
+
+    .wrapper .main-content select {
+        display: inline-block;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 10px 60px 10px 10px;
+        font-size: 1.1rem;
+        border: none;
+        text-align: left;
+        border: solid 1px transparent;
+        margin-bottom: 10px;
+        color: #222;
+        background: #eee url("../imgs/step5/down-arrow.png") no-repeat 90% center;
+        background-size: 20px 20px;
+        outline: none;
+        border-radius: 5px;
+        margin-right: 1rem;
+    }
+
+    .request-select-box:hover {
+        border: solid 1px #aaaaaa;
+        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+        outline: none;
+        border-radius: 0px;
+    }
+
+    .width-90 {
+        width: 90%;
+    }
+
+    .width-50 {
+        width: 50%;
+        min-width: 360px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex1 {
+        flex: 1;
+    }
+
+    #context .header {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .header-title {
+        padding: 10px 20px;
+        font-size: 2rem;
+        color: #523782;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #context .round-btn {
+        border-radius: 5px;
+        font-size: 24px;
+        /* padding: 20px 100px; */
+        background: rgb(228, 14, 123);
+        color: white;
+        align-items: center;
+        display: flex;
+        font-family: OpenSansSemiBold;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: 30px;
+        max-height: 76px;
+    }
+
+    .round-btn div {
+        font-size: 20px;
+        color: white;
+    }
+
+    .round-btn-disable {
+        background: rgba(228, 14, 123, 0.4) !important;
+    }
+
+    .back-btn {
+        background: url(../imgs/step2/back.png) no-repeat;
+        background-size: 100% 30px;
+        background-position: center;
+        width: 10px;
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+    }
+
+    #progress-bar {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        position: absolute;
+        top: -7%;
+        width: 100%;
+    }
+
+    #progress-bar .progressbar-content {
+        height: 50px;
+        max-width: 700px;
+        width: 75%;
+        position: absolute;
+    }
+
+    #progress-bar .progress-text {
+        color: white;
+        font-family: OpenSans;
+        font-size: 15px;
+    }
+
+    #progress-bar .progress-bg {
+        border: solid 1px white;
+        background: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        position: absolute;
+        height: 15px;
+        top: 25px;
+    }
+
+    #progress-bar .progress-fg {
+        background: white;
+        border: solid 1px white;
+        position: absolute;
+        height: 15px;
+        top: 25px;
+    }
+
+    .login-form {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .step4 .login-form {
+        align-items: flex-start;
+    }
+
+    .step7 .login-form {
+        align-items: center;
+    }
+
+    .login-btns {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 386px;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .step4 .login-btns {
+        margin-bottom: initial;
+        margin-top: 0px;
+    }
+
+    .main-content .header {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .main-content .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 470px;
+        margin: auto;
+    }
+
+    .flex-1 {
+        flex: 1;
+    }
+
+    .color-black {
+        color: #242424;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 25%;
+        max-width: 110px;
+        margin-bottom: 1vh;
+        cursor: pointer;
+    }
+
+    .card .title {
+        font-size: 14px;
+        font-family: OpenSansSemiBold;
+        color: #242424;
+    }
+
+    .card .date {
+        color: gray;
+        font-size: 12px;
+        font-family: OpenSansSemiBold;
+    }
+
+    .card-disable {
+        opacity: 0.5;
+    }
+
+    .header-title {
+        padding: 10px 20px;
+        font-size: 1.8rem;
+        color: #523782;
+        box-sizing: border-box;
+    }
+
+    .facebookbtn {
+        display: flex;
+        align-items: center;
+        background-color: #39579A;
+        font-family: OpenSansSemiBold;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .facebookbtn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .facebookbtn div {
+        flex: 1;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+
+    .googlebtn {
+        display: flex;
+        align-items: center;
+        background-color: #3E82F7;
+        font-family: OpenSansSemiBold;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .googlebtn img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .googlebtn div {
+        flex: 1;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .edit-text {
+        text-align: right;
+        width: 100%;
+        display: none;
+    }
+
+    .edit-text input {
+        margin-top: 3px;
+        padding: 7px 10px;
+        outline: none;
+        border-radius: 8px;
+        border: solid 1px transparent;
+        box-sizing: border-box;
+        font-family: OpenSansSemiBold;
+        color: #242424;
+        width: 100%;
+    }
+
+    .cancel-btn {
+        color: #222;
+        padding: 5px 20px;
+        display: inline-block;
+        cursor: pointer;
+        font-family: OpenSansSemiBold;
+    }
+
+    .save-btn {
+        color: #e4027b;
+        display: inline-block;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-family: OpenSansSemiBold;
+        text-shadow: rgba(0, 0, 0, 0.2) 0 0 1px 2px;
+    }
+
+    .edit-btn {
+        color: #e4027b;
+        font-family: OpenSansSemiBold;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+
+    .margin-b-30 {
+        margin-bottom: 30px;
+    }
+
+    .step6 .width-90 {
+        width: 100%;
+    }
+
+    .step6 .flex {
+        justify-content: space-between;
+    }
+
+    .step8 .wrapper .main-content {
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+        border-radius: 17px;
+        display: flex;
+        flex-flow: column;
+        padding: 15px;
+        box-sizing: border-box;
+        color: #523782;
+        padding-bottom: 40px;
+        font-family: OpenSansBoldItalic;
+        position: relative;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thanks-title {
+        color: #523782;
+        font-size: 1.5rem;
+        /* line-height: 2rem; */
+        font-family: OpenSansBoldItalic;
+        padding-bottom: 10px;
+    }
+
+    .thanks-subtitle {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-family: OpenSans;
+    }
+
+    .login-form .desc {
+        padding: 50px 10% 0px;
+        font-size: 13px;
+        text-align: center;
+        max-height: 100px;
+        overflow: hidden;
+        font-family: OpenSansSemiBold;
+    }
+
+    .horoscope-img {
+        max-width: 250px;
+        width: 50%;
+        padding-bottom: 30px;
+    }
+
+    * {
+        font-size: 17px;
+    }
+
+    .main-content .content {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    #context .wrapper {
+        max-width: 950px;
+        width: 95vw;
+        height: 135vw;
+        max-height: 80%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .back-btn {
+        top: 0;
+        left: 10px;
+        width: 15px;
+        height: 100%;
+    }
+
+    .login-form {
+        margin: 0px 15px;
+    }
+
+    .btn-disable {
+        opacity: 0.5;
+    }
+
+    @media screen and (max-width: 460px) {
+        * {
+            font-size: 15px;
+        }
+        .back-btn {
+            left: 5px;
+            width: 10px;
+            background-size: 100% 25px;
+        }
+        @media screen and (max-height: 800px) {
+            #context .wrapper {
+                height: calc(100% - 85px);
+                max-height: 100%;
+                min-height: 480px;
+                padding-bottom: 0px;
+                box-sizing: border-box;
+            }
+            .card {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                width: 80px;
+                max-width: 110px;
+                 margin-bottom: 0; 
+                cursor: pointer;
+            }
+            #context {
+                padding-bottom: 50px;
+                justify-content: flex-end;
+            }
+
+            .login-btns {
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        * {
+            font-size: 14px;
+        }
+        .card .title {
+            font-size: 13px;
+        }
+        .card .date {
+            font-size: 11px;
+        }
+    }
