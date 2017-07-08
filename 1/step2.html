@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <meta name="format-detection" content="telephone=no">
-    <script src="css/modernizr-custom.js"></script>
 </head>
 
 <body>
@@ -106,45 +105,7 @@
             </div>
         </div>
     </div>
-    <script>
-        document.ontouchmove = function (event) {
-            event.preventDefault();
-        }
-        var content = document.querySelector('.main-content .content');
-        if (navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/)) {
-            content.style.visibility = "hidden";
-        }
-        window.onload = function () {
-            var content = document.querySelector('.main-content .content');
-            content.style.visibility = "visible";
-            if (navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/)) {
-                var cards = document.querySelectorAll(".card");
-                var arr_cards = Array.from(cards);
-                arr_cards.forEach(function (item, index, arr) {
-                    item.style.width = "25%";
-
-
-                });
-
-            }
-            var userAgent = window.navigator.userAgent;
-
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-
-                var img = document.querySelector(".card img");
-                var cards = document.querySelectorAll(".card");
-                var arr_cards = Array.from(cards);
-                arr_cards.forEach(function (item, index, arr) {
-                    item.style.width = img.width + 2 + "px";
-
-                });
-                var content = document.querySelector(".main-content .content");
-                content.style.width = img.width * 4 + 10 + "px";
-
-            }
-
-        }
-    </script>
 </body>
+
 
 </html>

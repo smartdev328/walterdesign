@@ -5,10 +5,6 @@ html {
     height: 100%;
 }
 
-* {
-    font-size: 12px;
-}
-
 a {
     text-decoration: none;
 }
@@ -80,30 +76,26 @@ a {
     background-image: url("../imgs/common/Artboard1-desktop.png");
     background-size: 100% 100%;
     width: 100%;
-    height: calc(100% - 60px);
-    height: -webkit-calc(100% - 60px);
-    height: -webkit-calc(100% - 60px);
+    height: calc(100% - 55px);
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
 }
 
 #context .wrapper {
-    width: 92%;
-    margin: 0px 4%;
+    width: 100%;
+    padding: 0px 20px;
     box-sizing: border-box;
     height: 100%;
-    max-width: calc(100vh * 0.574 - 55px * 0.574 + 300px);
-    max-width: -webkit-calc(100vh * 0.574 - 55px * 0.574 + 300px);
-    max-width: -moz-calc(100vh * 0.574 - 55px * 0.574 + 300px);
 }
 
 #progress-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
+    height: 9.5%;
     width: 100%;
+    min-height: 52px;
 }
 
 #progress-bar .progressbar-content {
@@ -115,7 +107,7 @@ a {
 #progress-bar .progress-text {
     color: white;
     font-family: OpenSans;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 #progress-bar .progress-bg {
@@ -138,7 +130,6 @@ a {
 .wrapper .main-content {
     background: rgba(255, 255, 255, 0.75);
     width: 100%;
-    height: 80%;
     border-radius: 17px;
     display: flex;
     flex-flow: column;
@@ -146,18 +137,25 @@ a {
     box-sizing: border-box;
     color: gray;
     font-family: OpenSans;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    #context .wrapper {
+        width: calc(600px + 100% * 0.3 - 600px * 0.3);
+    }
 }
 
 #context .header {
     text-align: center;
     width: 100%;
-    height: 12.4%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 0px 20px;
+    min-height: 52px;
 }
 
 .header-title {
@@ -169,6 +167,11 @@ a {
     justify-content: center;
 }
 
+.step4 .header-title {
+    height: 100px;
+    min-height: 100px;
+}
+
 .back-btn {
     background: url(../imgs/step2/back.png) no-repeat;
     background-size: 100% 34px;
@@ -177,12 +180,12 @@ a {
     height: 100%;
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 5px;
     cursor: pointer;
 }
 
 * {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .main-content .content {
@@ -191,48 +194,33 @@ a {
     justify-content: center;
     flex-flow: row wrap;
     width: 100%;
-    padding: 0px calc(150px - 100vh * 0.574 * 0.5 + 55px * 0.574 * 0.5 - 300px * 0.5 + 100% * 0.5);
-    padding: 0px -webkit-calc(150px - 100vh * 0.574 * 0.5 + 55px * 0.574 * 0.5 - 300px * 0.5 + 100% * 0.5);
-    padding: 0px -webkit-calc(150px - 100vh * 0.574 * 0.5 + 55px * 0.574 * 0.5 - 300px * 0.5 + 100% * 0.5);
-    box-sizing: border-box;
-    height: 70%;
+    max-width: 58vh;
 }
-
-
-/* Padding Caculation */
-
-
-/*  current_padding = max_padding - (max_width - current_width)/2 */
 
 .card {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    height: 33.2%;
     margin-bottom: 0.1%;
     cursor: pointer;
-    max-width: 25%;
+    width: 25%;
+    padding: 0px 5px;
+    box-sizing: border-box;
 }
 
 .card img {
-    height: calc(100% - 40px);
-    height: -webkit-calc(100% - 40px);
-    height: -moz-calc(100% - 40px);
-    max-width: 100%;
-    max-height: calc(100vw * 0.92 /4);
-    max-height: -webkit-calc(100vw * 0.92 /4);
-    max-height: -moz-calc(100vw * 0.92 /4);
+    width: 100%;
 }
 
 .card .title {
-    font-size: 13px;
+    font-size: 1rem;
     font-family: OpenSansSemiBold;
     color: #242424;
 }
 
 .card .date {
     color: #242424;
-    font-size: 10px;
+    font-size: 0.8rem;
     font-family: OpenSansSemiBold;
 }
 
@@ -240,18 +228,9 @@ a {
     opacity: 0.5;
 }
 
-.login-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 17.4%;
-}
-
 #context .round-btn {
-    border-radius: 5px;
-    font-size: 1.5rem;
-    /* padding: 20px 100px; */
+    border-radius: 6px;
+    font-size: 1.7rem;
     background: rgb(228, 14, 123);
     align-items: center;
     display: flex;
@@ -259,15 +238,25 @@ a {
     letter-spacing: 1px;
     cursor: pointer;
     font-family: OpenSansSemiBold;
-    width: calc((100% - 2 * (15.85px + 50% - 28.7vh)) * 0.8);
-    width: -moz-calc((100% - 2 * (15.85px + 50% - 28.7vh)) * 0.8);
-    width: -webkit-calc((100% - 2 * (15.85px + 50% - 28.7vh)) * 0.8);
-    height: 60%;
-    /* Right Padding: calc( - 28.7vh + 15.785px  + 50%) = calc(15.85px + 50% - 28.7vh)*/
+    max-width: calc(58vh * 0.8);
+    padding: 13px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 70%;
+}
+
+.login-btns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 10vh;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .round-btn div {
-    font-size: 20px;
+    font-size: 1.3rem;
     color: white;
 }
 
@@ -275,40 +264,144 @@ a {
     background: rgba(228, 14, 123, 0.4) !important;
 }
 
-@media (max-width: 460px) {
-    #context {
-        background-image: url("../imgs/common/Artboard1.png");
-    }
+.facebookbtn {
+    display: flex;
+    align-items: center;
+    background-color: #39579A;
+    font-family: OpenSansSemiBold;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.facebookbtn img {
+    width: 40px;
+    height: 40px;
+}
+
+.facebookbtn div {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.googlebtn {
+    display: flex;
+    align-items: center;
+    background-color: #3E82F7;
+    font-family: OpenSansSemiBold;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.googlebtn img {
+    width: 45px;
+    height: 45px;
+}
+
+.googlebtn div {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.wrapper .main-content input {
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: solid 1px transparent;
+    box-sizing: border-box;
+    font-family: OpenSansSemiBold;
+}
+
+.wrapper .main-content select {
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 95px 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    text-align: left;
+    border: solid 1px transparent;
+    margin-bottom: 10px;
+    color: #222;
+    background: #eee url("../imgs/step5/down-arrow.png") no-repeat 90% center;
+    background-size: 20px 20px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.request-select-box:hover {
+    border: solid 1px #aaaaaa;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 0px;
+}
+
+.step4 .social-btns {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 386px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+hr {
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.5);
+}
+
+.step4 .main-content .content {
+    width: 90%;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+
+.step4 .main-content .content input {
+    margin: 2px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+@media (max-width: 760px) {
     * {
-        font-size: 14px;
+        font-size: 18px;
     }
-    .back-btn {
-        left: 0px;
-    }
-    .card {
-        padding-top: 3px;
-    }
-    #context .round-btn {
-        width: 100%;
-    }
-    @media screen and (max-height: 760px) {
-        .card {
-            padding-bottom: 0%;
-            padding-top: 0%;
-        }
-        .card .date {
-            font-size: 10px;
-        }
-        .card .title {
-            font-size: 13px;
-        }
-        .main-content .content {
-            height: 70%;
-            margin: auto;
-        }
-        .wrapper .main-content {
-            height: 88%;
-        }
+}
+
+@media (max-width: 540px) {
+    * {
+        font-size: 16px;
     }
 }
 
@@ -316,40 +409,88 @@ a {
     * {
         font-size: 13px;
     }
-}
-
-@media (max-width: 380px) {
-    * {
-        font-size: 12px;
+    .wrapper .main-content {
+        padding: 10px;
+    }
+    .card {
+        padding: 0px;
     }
     .back-btn {
         left: 0px;
-        background-size: 100% 28px;
-        width: 15px;
+        background-size: 100% 26px;
+        width: 13px;
     }
-    .card .date {
-        font-size: 8px;
+    .header-title {
+        min-height: 55px;
     }
-    .card .title {
-        font-size: 11px;
+    .wrapper .main-content {
+        padding: 10px 10px 0px 10px;
     }
-    @media screen and (max-height: 760px) {
-        .card {
-            padding-bottom: 0%;
-            padding-top: 0%;
-        }
-        .card .date {
-            font-size: 8px;
-        }
-        .card .title {
-            font-size: 11px;
-        }
-        .main-content .content {
-            height: 70%;
-            margin: auto;
-        }
-        .wrapper .main-content {
-            height: 88%;
-        }
+}
+
+@media (max-width: 400px) {
+    * {
+        font-size: 12px;
+    }
+    .wrapper .main-content {
+        padding: 0 10px;
+    }
+    .back-btn {
+        left: 0px;
+        background-size: 100% 26px;
+        width: 13px;
+    }
+    .header-title {
+        min-height: 55px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 740px) {
+    .main-content .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100%;
+        max-width: 100%;
+    }
+    #progress-bar {
+        min-height: 60px;
+        height: 60px;
+    }
+    body {
+        height: auto;
+    }
+    .login-btns {
+        height: 120px;
+        padding-top: 20px;
+    }
+    #context .wrapper {
+        padding-bottom: 60px;
+        height: initial;
+    }
+    #context {
+        height: initial;
+    }
+    .wrapper .main-content {
+        height: initial;
+    }
+}
+
+@media (min-height: 850px) {
+    .main-content .content {
+        max-width: 60vh;
+    }
+    #context .round-btn {
+        max-width: calc(60vh * 0.8);
+    }
+}
+
+@media (min-height: 900px) {
+    .main-content .content {
+        max-width: 62vh;
+    }
+    #context .round-btn {
+        max-width: calc(62vh * 0.8);
     }
 }
