@@ -3,10 +3,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="step5" >
+<body class="step5">
 
     <div id="header">
         <div class="logo"></div>
@@ -30,14 +30,14 @@
                         Tell us about yourself
                     </div>
                 </section>
-                <section class="login-form">
+                <section class="edit-section">
                     <div>FIRST Name</div>
                     <div class="flex width-100" style="margin-bottom: 10px;margin-top: 5px;">
                         <input type="text" class="width-100">
                     </div>
                     <div>Birthday</div>
                     <div class="flex width-100 birthday-select" style="margin-bottom: 10px;margin-top: 5px;">
-                        <select class="select-box" id="monthpicker" onchange="datepickerChanged()">
+                        <select class="select-box" id="monthpicker">
                             <option>&nbsp;</option>
                             <option value="1">January</option>
                             <option value="2">February</option>
@@ -61,7 +61,7 @@
 
                     </div>
                     <div>Birth Location</div>
-                    <input type="text" style="margin-bottom: 10px;margin-top: 5px;">
+                    <input type="text" class="width-100" style="margin-bottom: 10px;margin-top: 5px;">
                 </section>
                 <section class="login-btns">
                     <div class="round-btn">
@@ -90,25 +90,6 @@
                 datepicker.innerHTML += "<option value='" + j + "'>" + j + "</option>";
             }
 
-        }
-        // Get the number of days in chosen year and month. 
-        function daysInMonth(month, year) {
-            return new Date(year, month, 0).getDate();
-        }
-
-        function datepickerChanged() {
-            var month = monthpicker.value;
-
-            var d = new Date();
-            if (monthpicker.value === 'undefined') month = d.getMonth() + 1;
-
-            year = d.getFullYear();
-            var numberOfDays = daysInMonth(month, year);
-            if (month == 2) numberOfDays = 29;
-            datepicker.innerHTML = "";
-            for (var j = 1; j <= numberOfDays; j++) {
-                datepicker.innerHTML += "<option value='" + j + "'>" + j + "</option>";
-            }
         }
     </script>
 </body>
